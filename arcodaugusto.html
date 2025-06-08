@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project KE4H: Arco d'Augusto</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  
+ <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="methodology.html">Methodology</a></li>
+      <li><a href="sparqlqueries.html">SPARQL Queries</a></li>
+      <li>
+        <a href="#">Monuments</a>
+        <ul>
+          <li><a href="arcodaugusto.html">Arco d'Augusto</a></li>
+          <li><a href="tempiomalatestiano.html">Tempio Malatestiano</a></li>
+          <li><a href="domusdelchirurgo.html">Domus del Chirurgo</a></li>
+          <li><a href="ponteditiberio.html">Ponte di Tiberio</a></li>
+          <li><a href="chiesadisantagostino.html">Chiesa di Sant'Agostino</a></li>
+        </ul>
+      </li>
+      <li><a href="facedchallenges.html">Faced Challenges</a></li>
+      <li><a href="conclusions.html">Conclusions</a></li>
+    </ul>
+ </nav>
+
+  <main>
+    <br>
+    <br>
+	<h1><a href="https://en.wikipedia.org/wiki/Arch_of_Augustus_(Rimini)" target="_blank" rel="noopener noreferrer">Arco d'Augusto</a></h1>
+    <h2>Id di wikidata dell'Arco d'Augusto: Q1072853</h2>
+    <br>
+    <br>
+    <br>
+    <h2>Foto dell'Arco</h2>
+    <br>
+    <img src="images/arco-d-augusto.jpg" alt="Arco d'Augusto" height="500";">
+    <br>
+    <p>Immagine dell'Arco d'Augusto.</p>
+    <br>
+    <br>
+    <br>
+    <h2>Query describe Arco d'Augusto</h2>
+	<br>
+	<pre style="font-size: 1.5em;"><code>
+		PREFIX wd: &lt;http://www.wikidata.org/entity/&gt;
+		PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+		PREFIX bd: &lt;http://www.bigdata.com/rdf#&gt;
+		PREFIX wikibase: &lt;http://wikiba.se/ontology#&gt;
+		<strong>DESCRIBE</strong> wd:Q1072853
+		WHERE {
+			SERVICE wikibase:label { bd:serviceParam wikibase:language "it,en". }
+		}
+	</code></pre>
+
+	<p>
+		<a href="https://query.wikidata.org/embed.html#PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX%20bd%3A%20%3Chttp%3A%2F%2Fwww.bigdata.com%2Frdf%23%3E%0APREFIX%20wikibase%3A%20%3Chttp%3A%2F%2Fwikiba.se%2Fontology%23%3E%0ADESCRIBE%20wd%3AQ1072853%0AWHERE%20%7B%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22it%2Cen%22.%20%7D%0A%7D" 
+		target="_blank" rel="noopener noreferrer">
+		🔗 Let's see the results
+		</a>
+	</p>
+    <br>
+    <br>
+    <br>
+    <h2>Query select Arco d'Augusto</h2>
+	<br>
+	<pre style="font-size: 1.5em;"><code>
+		PREFIX wd: <http://www.wikidata.org/entity/>
+		PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+		PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+		SELECT DISTINCT ?monuments ?monument_name ?website ?inscription
+		WHERE {
+			VALUES ?monuments
+			{ wd:Q1072853 }
+			?monuments rdfs:label ?monument_name .
+			FILTER(LANG(?monument_name) = "it")
+		OPTIONAL { ?monuments wdt:P856 ?website. } 		# guardo se il monumento ha il sito web
+		OPTIONAL { ?monuments wdt:P1684 ?inscription. } 	# guardo se il monumento ha l’iscrizione
+	}
+	</code></pre>
+
+	<p>
+		<a href="https://query.wikidata.org/embed.html#PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0APREFIX%20wdt%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fdirect%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0ASELECT%20DISTINCT%20%3Fmonuments%20%3Fmonument_name%20%3Fwebsite%20%3Finscription%0AWHERE%20%7B%0AVALUES%20%3Fmonuments%0A%20%20%7B%20wd%3AQ1072853%20%7D%0A%20%20%3Fmonuments%20rdfs%3Alabel%20%3Fmonument_name%20.%0A%20%20FILTER%28LANG%28%3Fmonument_name%29%20%3D%20%22it%22%29%0A%20%20OPTIONAL%20%7B%20%3Fmonuments%20wdt%3AP856%20%3Fwebsite.%20%7D%20%09%09%23%20guardo%20se%20il%20monumento%20ha%20il%20sito%20web%0A%20%20OPTIONAL%20%7B%20%3Fmonuments%20wdt%3AP1684%20%3Finscription.%20%7D%20%09%23%20guardo%20se%20il%20monumento%20ha%20l’iscrizione%0A%7D" 
+		target="_blank" rel="noopener noreferrer">
+		🔗 Let's see the results
+		</a>
+	</p>
+    <br>
+    <br>
+    <br>
+    <h2>LLM 1 Arco d'Augusto</h2>
+    <br>
+    <p>Description</p>
+    <br>
+    <br>
+    <br>
+    <h2>LLM 2 Arco d'Augusto</h2>
+    <br>
+    <p>Description</p>
+    <br>
+    <br>
+    <br>
+    <h2>Query construct Arco d'Augusto di chat GPT</h2>
+    <br>
+    <p>Description</p>
+    <br>
+    <br>
+    <br>
+    <h2>Query construct Arco d'Augusto giusta</h2>
+    <br>
+    <p>Description</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  </main>
+
+</body>
+</html>

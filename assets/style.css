@@ -1,0 +1,96 @@
+/* Stili generali */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding-top: 60px; /* Spazio per il menu fisso */
+}
+
+/* Menu principale */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav > ul > li {
+  margin-right: 1rem;
+}
+
+nav a {
+  display: block;
+  padding: 14px 16px;
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+nav li:hover > a {
+  background-color: #111;
+}
+
+/* Menu a tendina */
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  padding: 0;
+  min-width: 180px;
+  flex-direction: column;
+}
+
+nav ul li:hover > ul {
+  display: flex;
+}
+
+nav ul ul li a {
+  padding: 12px 16px;
+}
+
+nav ul ul a:hover {
+  background-color: #222;
+}
+
+/* Contenuto principale */
+main {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 3.5em;
+  font-weight: 900;
+  color: #8B0000;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5em;
+  font-weight: 500;
+  color: #8B4430;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
