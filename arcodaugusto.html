@@ -31,100 +31,397 @@
   <main>
     <br>
     <br>
-	<h1><a href="https://en.wikipedia.org/wiki/Arch_of_Augustus_(Rimini)" target="_blank" rel="noopener noreferrer">Arco d'Augusto</a></h1>
-    <h2>Id di wikidata dell'Arco d'Augusto: Q1072853</h2>
+	<h1><a href="https://en.wikipedia.org/wiki/Arch_of_Augustus_(Rimini)" target="_blank" rel="noopener noreferrer" class="no-underline-link">Arco d'Augusto </a></h1>
+	<h2>ID WD: Q1072853</h2>
     <br>
     <br>
     <br>
-    <h2>Foto dell'Arco</h2>
+    <img src="images/arc-photo.jpg" alt="Arco d'Augusto" class="centered-image-with-border">
     <br>
-    <img src="images/arco-d-augusto.jpg" alt="Arco d'Augusto" height="500";">
+	<h2> Why the Arch of Augustus? &#x1F3DB</h2>
     <br>
-    <p>Immagine dell'Arco d'Augusto.</p>
+    <p> <strong><a href="https://en.wikipedia.org/wiki/Arch_of_Augustus_(Rimini)" class="no-underline-link"</a> The Arch of Augustus</a> </strong> in <strong><a href="https://en.wikipedia.org/wiki/Rimini" class="no-underline-link">Rimini</a></strong> is a magnificent Roman triumphal arch, 
+	built in 27 BC in honor of <strong><a href="https://en.wikipedia.org/wiki/Augustus" class="no-underline-link">Emperor Augustus</a></strong>. 
+	It's the oldest Roman arch still standing in <strong> <a href=" https://en.wikipedia.org/wiki/Italy" class="no-underline-link"</a> Italy</a> </strong> and marks the official end of the <strong><a href="https://en.wikipedia.org/wiki/Via_Flaminia" class="no-underline-link">Via Flaminia</a></strong>, 
+	a crucial Roman road connecting Rimini (ancient Ariminum) to <strong><a href="https://en.wikipedia.org/wiki/Rome" class="no-underline-link">Rome</a></strong>.
+	It is important due to its historical significance as it symbolizes the <strong><a href="https://en.wikipedia.org/wiki/Pax_Romana" class="no-underline-link">"Pax Augusta"</a></strong>, 
+	a period of relative stability and prosperity, and it has become a symbol of Rimini: 
+	along with the <strong><a href="https://en.wikipedia.org/wiki/Ponte_di_Tiberio_(Rimini)" class="no-underline-link"</a> Ponte di Tiberio</a></strong>, it is an iconic symbol of Rimini and even appears on the city's coat of arms. 
+	It serves as a powerful reminder of the city's significant role in the <strong><a href="https://en.wikipedia.org/wiki/Roman_Empire" class="no-underline-link"</a> Roman Empire </a> </strong>.
+</p>
     <br>
-    <br>
-    <br>
-    <h2>Query describe Arco d'Augusto</h2>
+	<p> I decided to enrich its entity because maintaining its profile Wikidata up-to-date is crucial, given its high visibility as an iconic landmark in Rimini and the central role in Rimini's identity and tourism. </p>  
+    <hr class="section-divider">
+	<h2> SPARQL queries to detect the gaps &#128269 </h2>
 	<br>
-	<pre style="font-size: 1.5em;"><code>
-		PREFIX wd: &lt;http://www.wikidata.org/entity/&gt;
-		PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
-		PREFIX bd: &lt;http://www.bigdata.com/rdf#&gt;
-		PREFIX wikibase: &lt;http://wikiba.se/ontology#&gt;
-		<strong>DESCRIBE</strong> wd:Q1072853
-		WHERE {
-			SERVICE wikibase:label { bd:serviceParam wikibase:language "it,en". }
-		}
+	<h3> DESCRIBE Query </h3>
+	<br>
+	<p> First of all, I use this query with the <strong class="highlighted-strong">DESCRIBE</strong> function to see all the properties and objects belonging to the Arch of Augustus. 
+	I find it useful to see if it is already well described or not, and to see which properties may be missing. </p>
+	
+	<pre class="code-frame"><code>
+PREFIX wd: &lt;http://www.wikidata.org/entity/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX bd: &lt;http://www.bigdata.com/rdf#&gt;
+PREFIX wikibase: &lt;http://wikiba.se/ontology#&gt;
+<strong>DESCRIBE</strong> wd:Q1072853
+WHERE {
+	SERVICE wikibase:label { bd:serviceParam wikibase:language "it,en". }
+}
 	</code></pre>
-
 	<p>
 		<a href="https://query.wikidata.org/embed.html#PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX%20bd%3A%20%3Chttp%3A%2F%2Fwww.bigdata.com%2Frdf%23%3E%0APREFIX%20wikibase%3A%20%3Chttp%3A%2F%2Fwikiba.se%2Fontology%23%3E%0ADESCRIBE%20wd%3AQ1072853%0AWHERE%20%7B%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22it%2Cen%22.%20%7D%0A%7D" 
-		target="_blank" rel="noopener noreferrer">
+		target="_blank" rel="noopener noreferrer" class="no-underline-link">
 		🔗 Let's see the results
 		</a>
 	</p>
+    <p> I notice that some other interesting properties to be added could be the website and inscription on the Arch.</p> 
     <br>
-    <br>
-    <br>
-    <h2>Query select Arco d'Augusto</h2>
+    <h3> SELECT Query </h3>
 	<br>
-	<pre style="font-size: 1.5em;"><code>
-		PREFIX wd: <http://www.wikidata.org/entity/>
-		PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-		PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-		SELECT DISTINCT ?monuments ?monument_name ?website ?inscription
-		WHERE {
-			VALUES ?monuments
-			{ wd:Q1072853 }
-			?monuments rdfs:label ?monument_name .
-			FILTER(LANG(?monument_name) = "it")
-		OPTIONAL { ?monuments wdt:P856 ?website. } 		# guardo se il monumento ha il sito web
-		OPTIONAL { ?monuments wdt:P1684 ?inscription. } 	# guardo se il monumento ha l’iscrizione
-	}
+	<p> Then I proceed with a <strong class="highlighted-strong">SELECT</strong> query, using the <strong class="highlighted-strong">OPTIONAL</strong> function to see the properties worth describing that
+	can be missing from the knowledge graph. </p>
+    <pre class="code-frame" style="max-width: 900px;"><code>
+PREFIX wd: &lt;http://www.wikidata.org/entity/&gt;
+PREFIX wdt: &lt;http://www.wikidata.org/prop/direct/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+<strong>SELECT</strong> <strong>DISTINCT</strong> ?monuments ?monument_name ?city (YEAR(?inauguration_date) AS ?inauguration_year) 
+		?material ?style ?eponym ?website ?inscription
+WHERE {
+VALUES ?monuments
+ { wd:Q1072853 }
+ ?monuments rdfs:label ?monument_name .
+ <strong>FILTER</strong>(LANG(?monument_name) = "it")
+ <strong>OPTIONAL</strong> { ?monuments wdt:P856 ?website. }           # I look for the website
+ <strong>OPTIONAL</strong> { ?monuments wdt:P1684 ?inscription. }      # I look for the inscription
+ <strong>OPTIONAL</strong> { ?monuments wdt:P571 ?inauguration_date. } # I look for the inauguration date
+ <strong>OPTIONAL</strong> { ?monuments wdt:P186 ?constrmaterial. }    # I look for the materials of construction
+ <strong>OPTIONAL</strong> { ?monuments wdt:P149 ?archstyle. }         # I look for the architectural style
+ <strong>OPTIONAL</strong> { ?monuments wdt:P138 ?namedafter. }        # I look for the eponym
+  SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "en,it" .
+    ?moncity rdfs:label ?city .
+    ?constrmaterial rdfs:label ?material .
+    ?archstyle rdfs:label ?style .
+    ?namedafter rdfs:label ?eponym .
+  }
+}
 	</code></pre>
-
+    <br>
 	<p>
-		<a href="https://query.wikidata.org/embed.html#PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0APREFIX%20wdt%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fdirect%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0ASELECT%20DISTINCT%20%3Fmonuments%20%3Fmonument_name%20%3Fwebsite%20%3Finscription%0AWHERE%20%7B%0AVALUES%20%3Fmonuments%0A%20%20%7B%20wd%3AQ1072853%20%7D%0A%20%20%3Fmonuments%20rdfs%3Alabel%20%3Fmonument_name%20.%0A%20%20FILTER%28LANG%28%3Fmonument_name%29%20%3D%20%22it%22%29%0A%20%20OPTIONAL%20%7B%20%3Fmonuments%20wdt%3AP856%20%3Fwebsite.%20%7D%20%09%09%23%20guardo%20se%20il%20monumento%20ha%20il%20sito%20web%0A%20%20OPTIONAL%20%7B%20%3Fmonuments%20wdt%3AP1684%20%3Finscription.%20%7D%20%09%23%20guardo%20se%20il%20monumento%20ha%20l’iscrizione%0A%7D" 
-		target="_blank" rel="noopener noreferrer">
+		<a href="https://query.wikidata.org/embed.html#PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0APREFIX%20wdt%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fdirect%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0ASELECT%20DISTINCT%20%3Fmonuments%20%3Fmonument_name%20%3Fcity%20%28YEAR%28%3Finauguration_date%29%20AS%20%3Finauguration_year%29%20%3Fmaterial%20%3Fstyle%20%3Feponym%20%3Fwebsite%20%3Finscription%0AWHERE%20%7B%0AVALUES%20%3Fmonuments%0A%20%7B%20wd%3AQ1072853%20%7D%0A%20%3Fmonuments%20rdfs%3Alabel%20%3Fmonument_name%20.%0A%20FILTER%28LANG%28%3Fmonument_name%29%20%3D%20%22it%22%29%0A%20OPTIONAL%20%7B%20%3Fmonuments%20wdt%3AP856%20%3Fwebsite.%20%7D%0A%20OPTIONAL%20%7B%20%3Fmonuments%20wdt%3AP1684%20%3Finscription.%20%7D%20%0A%20OPTIONAL%20%7B%20%3Fmonuments%20wdt%3AP571%20%3Finauguration_date.%20%7D%0A%20OPTIONAL%20%7B%20%3Fmonuments%20wdt%3AP186%20%3Fconstrmaterial.%20%7D%0A%20OPTIONAL%20%7B%20%3Fmonuments%20wdt%3AP149%20%3Farchstyle.%20%7D%0A%20OPTIONAL%20%7B%20%3Fmonuments%20wdt%3AP138%20%3Fnamedafter.%20%7D%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%2Cit%22%20.%0A%20%20%20%20%3Fmoncity%20rdfs%3Alabel%20%3Fcity%20.%0A%20%20%20%20%3Fconstrmaterial%20rdfs%3Alabel%20%3Fmaterial%20.%0A%20%20%20%20%3Farchstyle%20rdfs%3Alabel%20%3Fstyle%20.%0A%20%20%20%20%3Fnamedafter%20rdfs%3Alabel%20%3Feponym%20.%0A%20%20%7D%0A%7D%0A" 
+		target="_blank" rel="noopener noreferrer" class="no-underline-link">
 		🔗 Let's see the results
 		</a>
 	</p>
+	<p> I can notice that these are all <strong>missing information</strong> from the result table. </p>
+	<hr class="section-divider">
+    <h2>Use of LLMs to enrich the knowledge graph &#129302</h2>
     <br>
+	<p> I asked <strong><a href="https://chatgpt.com/auth/login" class="no-underline-link"</a>Chat GPT</a></strong>, <strong><a href="https://www.deepseek.com/en" class="no-underline-link"</a>Deep Seek</a> </strong> and <strong><a href="https://gemini.google.com/app?hl=itGemini " class="no-underline-link"</a>Gemini</a> </strong> to help me with the missing information and compared their outcomes. 
+	I asked the three LLMs two questions. </p>
+    <h3>Zero-shot prompt </h3>
+	<br>
+	<p> The first question was a zero shot prompt: </p>
+	<p class="my-custom-paragraph">
+	"Can you tell me the inauguration date, the construction materials, 
+	the architectural style, the inscription, and after whom the Arch of Augustus in Rimini was named? Thank you!" </p>
+	<br>
+	<h4>Chat GPT's answer </h4>
+	<br>
+	<p style="text-align: center;">
+    <img src="images/arc-ChatGPT1.jpg" width="700">
+	<img src="images/arc-ChatGPT2.jpg" width="700">
+	<img src="images/arc-ChatGPT3.jpg" width="700">
+	</p>
     <br>
+	<p> Chat GPT makes confusion between travertine and Istrian stone which are not the same thing, 
+	and it doesn't know precisely the inscription on the Arc, it has it incomplete. </p>
+	<h4>Deep Seek's answer </h4>
+	<br>
+	<p style="text-align: center;">
+	<img src="images/arc-deepseek1.jpg" width="700">
+	<img src="images/arc-deepseek2.jpg" width="700">
+	</p>
     <br>
-    <h2>LLM 1 Arco d'Augusto</h2>
+	<p> On the other hand, Deep Seek knows that it is built in Istrian stone but is mistaken on the inscription as well. </p>
+	<br>
+	<h4>Gemini's answer</h4>
+	<br>
+	<p style="text-align: center;">
+	<img src="images/arc-gemini1.jpg" width="700">
+	<img src="images/arc-gemini2.jpg" width="700">
+	</p>
+	<p> Gemini is the most accurate one in its answers as it even has the right inscription and links the sources for the information it provides. </p>	
+    <p> Some researches on reliable sources confirmed that the inauguration date of the Arch of Augustus is 27 BC, the monument was erected to honor Emperor Octavian Augustus and the style is that of classical Roman architecture.
+	It is made of Istrian stone and the inscription reads: SENATVS · POPVLVS · COS · SEPT · DESIGNAT · OCTAVOM· CELEBERRIMEIS· ITALIAE· VIEIS · CONSILIO. </p>
+	<p style="font-size: 0.9em;">
+  Sources:
+  <strong><a href="https://www.comune.rimini.it/vivere-il-comune/luoghi/area-archeologica/arco-daugusto" class="no-underline-link">Website of the Rimini city hall</a></strong>,
+  <strong><a href="https://riminiturismo.it/cosa-vedere/arte-e-cultura/archi-porte-mura-portici/arco-daugusto" class="no-underline-link">Website of Rimini tourism </a></strong>
+  and the book Pasini <em>Guida per Rimini</em>, <a href="https://approfondimenti.maggiolicloud.it/login " class="no-underline-link">Maggioli Editore</a> , Rimini, 1989.
+	</p> 
+	<br>
+	<p> This implies that it is always important to verify information coming from LLMs on reliable sources, even for factual data like this. </p>
+    <h3>Few-shots chain-of-thought prompt </h3>
+	<br>
+    <p> I then decided to add this information in Wikidata through a <strong class="highlighted-strong">CONSTRUCT</strong> query. 
+	Therefore, I ask ChatGPT and Deep Seek to help me create a <strong class="highlighted-strong">CONSTRUCT</strong> query through a few-shots chain-of-thought prompt. </p>
+	<p> The question was formulated as it follows, giving as examples two queries made to create new triples for the <a href="https://dati.beniculturali.it/arco-rete-ontologie" class="no-underline-link">ArCo knowledge graph </a>: </p>
+	
+	<p class="my-custom-paragraph">
+	"Hi, I need to enrich the entity wd:Q1072853 (Arch of Augustus in Rimini) in the Wikidata knowledge graph with some new triples. I noticed that in the page various things are missing such as:
+
+- the inauguration date;
+<br>
+- the eponym;
+<br>
+- the architectural style;
+<br>
+- the material;
+<br>
+- the website;
+<br>
+- the inscription on the arc.
+<br>
+<br>
+Can you create a CONSTRUCT query for Wikidata with all this information, following these examples taken from some queries made to the ArCo knowledge graph?:
+<br>
+<br>
+<span style="font-family: Consolas, 'Courier New', Courier, monospace; font-size: 0.5em;">
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+<br>
+PREFIX clv: &lt;https://w3id.org/italia/onto/CLV/&gt; 
+<br>
+PREFIX cis: &lt;http://dati.beniculturali.it/cis/&gt; 
+<br>
+PREFIX a-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt; 
+<br>
+PREFIX l0: &lt;https://w3id.org/italia/onto/l0/&gt; 
+<br>
+ CONSTRUCT { 
+ <br>
+  &nbsp;&nbsp;&nbsp;&nbsp; ?place a cis:GeographicalFeature ; l0:name "Firenze" . 
+		  <br>
+ &nbsp;&nbsp;&nbsp;&nbsp; ?event a cis:CulturalEvent ; clv:hasSpatialCoverage ?place ; l0:name ?eventName ;
+		  <br>
+ &nbsp;&nbsp;&nbsp;&nbsp;  cis:involvesCulturalEntity ?culturalProperty .
+          <br>						 
+ &nbsp;&nbsp;&nbsp;&nbsp;  ?culturalProperty a-cd:hasAuthor ?author ; l0:name ?title .
+          <br>		  
+ &nbsp;&nbsp;&nbsp;&nbsp; ?author l0:name ?authorName
+<br>		  
+} 
+<br>
+WHERE {
+<br> 
+ &nbsp;&nbsp;&nbsp;&nbsp; ?place a cis:GeographicalFeature ; rdfs:label "Firenze" .
+      <br>	  
+ &nbsp;&nbsp;&nbsp;&nbsp; ?event a cis:CulturalEvent ; clv:hasSpatialCoverage ?place ; rdfs:label ?eventName ;  
+      <br>	  
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cis:involvesCulturalEntity ?culturalProperty .
+      <br>								   
+ &nbsp;&nbsp;&nbsp;&nbsp; ?culturalProperty a-cd:hasAuthor ?author ; rdfs:label ?title .
+      <br>	  
+ &nbsp;&nbsp;&nbsp;&nbsp; ?author rdfs:label ?authorName
+      <br>      
+ &nbsp;&nbsp;&nbsp;&nbsp; FILTER(REGEX(?authorName, "andrea del Castagno", "i"))
+<br>	  
+}  
+<br>
+<br>
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; 
+<br>
+PREFIX clv: &lt;https://w3id.org/italia/onto/CLV/&gt; 
+<br>
+PREFIX cis: &lt;http://dati.beniculturali.it/cis/&gt; 
+<br>
+PREFIX a-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt; 
+<br>
+PREFIX l0: &lt;https://w3id.org/italia/onto/l0/&gt; 
+<br>
+CONSTRUCT {
+	<br>
+ &nbsp;&nbsp;&nbsp;&nbsp; ?author cis:exhibitedAt ?event .
+	<br>
+	}
     <br>
-    <p>Description</p>
+WHERE {
     <br>
+ &nbsp;&nbsp;&nbsp;&nbsp;	?event a cis:CulturalEvent ;
+	<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;		cis:involvesCulturalEntity ?culturalProperty .
+	<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;	?culturalProperty a arco:HistoricOrArtisticProperty ;
+	<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;			a-cd:hasAuthor ?author ;
+	<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;			rdfs:label ?title .
+	<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;	?author rdfs:label ?authorName .
+	<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;		FILTER (REGEX (?authorName, "andrea del Castagno", "i") )
+	<br>
+}
+</span>
+<br>
+Let's think step by step!" 
+ </p>
+	<br>
+	<h4>Chat GPT's answer</h4>
+	<p> <p style="text-align: center;">
+	<img src="images/arc-chat4.jpg" width="700">
+	<img src="images/arc-chat5.jpg" width="700">
+	</p>
+	<p> <p style="text-align: left;">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/arc-chat6.jpg" width="500">
+	</p>
+    <pre class="code-frame" style="max-width: 1000px;"><code>
+PREFIX wd: &lt;http://www.wikidata.org/entity/&gt;
+PREFIX wdt: &lt;http://www.wikidata.org/prop/direct/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+<strong>CONSTRUCT </strong> {
+  wd:Q1072853 wdt:P571 "-0026-01-01T00:00:00Z"^^xsd:dateTime ;
+              wdt:P138 wd:Q859 ;
+              wdt:P149 wd:Q1763375, wd:Q180782, wd:Q180800 ;
+              wdt:P186 wd:Q3912677 ;
+              wdt:P856 <https://www.comune.rimini.it/vivere-il-comune/luoghi/area-archeologica/arco-daugusto> ;
+              wdt:P1684 "SENATVS POPVLVSQVE ROMANVS IMP CAESARI DIVI F AVGVSTO COS VIII TRIBVNIC POTEST XX"@la .
+  wd:Q859 rdfs:label "Ottaviano Augusto"@it .
+  wd:Q1763375 rdfs:label "Architettura romana classica"@it .
+  wd:Q180782 rdfs:label "Ordine dorico"@it .
+  wd:Q180800 rdfs:label "Ordine corinzio"@it .
+  wd:Q3912677 rdfs:label "Pietra d'Istria"@it .
+}
+<strong>WHERE</strong> {
+  BIND(wd:Q1072853 AS ?monument)
+}
+	</code></pre>
     <br>
+	<p>
+		<a href="https://query.wikidata.org/embed.html#PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0APREFIX%20wdt%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fdirect%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX%20xsd%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0ACONSTRUCT%20%7B%0A%20%20wd%3AQ1072853%20wdt%3AP571%20%22-0026-01-01T00%3A00%3A00Z%22%5E%5Exsd%3AdateTime%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP138%20wd%3AQ859%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP149%20wd%3AQ1763375%2C%20wd%3AQ180782%2C%20wd%3AQ180800%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP186%20wd%3AQ3912677%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP856%20%3Chttps%3A%2F%2Fwww.comune.rimini.it%2Fvivere-il-comune%2Fluoghi%2Farea-archeologica%2Farco-daugusto%3E%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP1684%20%22SENATVS%20POPVLVSQVE%20ROMANVS%20IMP%20CAESARI%20DIVI%20F%20AVGVSTO%20COS%20VIII%20TRIBVNIC%20POTEST%20XX%22%40la%20.%0A%20%20wd%3AQ859%20rdfs%3Alabel%20%22Ottaviano%20Augusto%22%40it%20.%0A%20%20wd%3AQ1763375%20rdfs%3Alabel%20%22Architettura%20romana%20classica%22%40it%20.%0A%20%20wd%3AQ180782%20rdfs%3Alabel%20%22Ordine%20dorico%22%40it%20.%0A%20%20wd%3AQ180800%20rdfs%3Alabel%20%22Ordine%20corinzio%22%40it%20.%0A%20%20wd%3AQ3912677%20rdfs%3Alabel%20%22Pietra%20d'Istria%22%40it%20.%0A%7D%0AWHERE%20%7B%0A%20%20BIND%28wd%3AQ1072853%20AS%20%3Fmonument%29%0A%7D%0A" 
+		target="_blank" rel="noopener noreferrer" class="no-underline-link">
+		🔗 Let's see the results
+		</a>
+	</p>
+	<p> <p style="text-align: center;">
+	<img src="images/arc-chat7.jpg" width="700">
+	</p>
+	<p>
+	The properties are fine, but the IDs for Augustus, Istrian stone, and the architectural style are wrong and need to be corrected with (Augustus: Q1405, Istrian stone: Q1401767, Ancient Roman architectural style: Q223750). 
+	<br>
+	Additionally, the <strong class="highlighted-strong">WHERE</strong> section was not filled out correctly like in the example queries I provided.
+	</p>
+	<br>
+	<h4>Deep Seek's answer</h4>
+	<p> <p style="text-align: center;">
+	<img src="images/arc-deepseek3.jpg" width="700">
+	</p>
+    <pre class="code-frame" style="max-width: 1150px;"><code>
+PREFIX wd: &lt;http://www.wikidata.org/entity/&gt;
+PREFIX wdt: &lt;http://www.wikidata.org/prop/direct/&gt;
+<strong>CONSTRUCT </strong> {
+  wd:Q1072853 wdt:P571 "27 BCE"^^xsd:gYear ;  		# inception date (27 BCE)
+              wdt:P138 wd:Q140 ;              	 	# named after (Augustus)
+              wdt:P149 wd:Q236122 ;           		# architectural style (Roman architecture)
+              wdt:P186 wd:Q3803716 ;          		# made from material (Istrian stone)
+              wdt:P856 "https://www.riminiturismo.it/visita/arco-d-augusto" ;   # official website
+              wdt:P1684 "IMP?CAESAR?DIVI?FILIVS?AVGVSTVS?PONTIFEX?MAXIMVS?IMP?XIIII?TRIBVNIC?POTEST?XVII?P?P?"@la . # inscription
+}
+<strong>WHERE</strong> {
+# We don't need to match any existing data since we're adding new information
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+}
+	</code></pre>
     <br>
-    <h2>LLM 2 Arco d'Augusto</h2>
+	<p>
+		<a href="https://query.wikidata.org/embed.html#PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0APREFIX%20wdt%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fdirect%2F%3E%0ACONSTRUCT%20%7B%0A%20%20wd%3AQ1072853%20wdt%3AP571%20%2227%20BCE%22%5E%5Exsd%3AgYear%20%3B%20%20%23%20inception%20date%20%2827%20BCE%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP138%20wd%3AQ140%20%3B%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20named%20after%20%28Augustus%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP149%20wd%3AQ236122%20%3B%20%20%20%20%20%20%20%20%20%20%23%20architectural%20style%20%28Roman%20architecture%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP186%20wd%3AQ3803716%20%3B%20%20%20%20%20%20%20%20%20%20%23%20made%20from%20material%20%28Istrian%20stone%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP856%20%22https%3A%2F%2Fwww.riminiturismo.it%2Fvisita%2Farco-d-augusto%22%20%3B%20%23%20official%20website%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP1684%20%22IMP?CAESAR?DIVI?FILIVS?AVGVSTVS?PONTIFEX?MAXIMVS?IMP?XIIII?TRIBVNIC?POTEST?XVII?P?P?%22%40la%20.%20%23%20inscription%0A%7D%0AWHERE%20%7B%0A%20%20%23%20We%20don't%20need%20to%20match%20any%20existing%20data%20since%20we're%20adding%20new%20information%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%7D%0A%7D%0A" 
+		target="_blank" rel="noopener noreferrer" class="no-underline-link">
+		🔗 Let's see the results
+		</a>
+	<p>
+	Here the problems are the same, the objects are not correct, even if in the comments it identified the Istrian stone, roman architecture etc... in the results the were changed!
+	Therefore, I need to modify the query to generate meaningful triples.
+	</p>
+	<br>
+	<h4>Gemini's answer</h4>
+	<p> <p style="text-align: center;">
+	<img src="images/arc-gemini3.jpg" width="700">
+	<img src="images/arc-gemini4.jpg" width="700">
+	<img src="images/arc-gemini5.jpg" width="700">
+	</p>
+    <pre class="code-frame" style="max-width: 1000px;"><code>
+PREFIX wd: &lt;http://www.wikidata.org/entity/&gt;
+PREFIX wdt: &lt;http://www.wikidata.org/prop/direct/&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+
+<strong>CONSTRUCT </strong> {
+  wd:Q1072853 wdt:P571 "0027-01-01T00:00:00Z"^^xsd:dateTime ;
+              wdt:P138 wd:Q1405 ;
+              wdt:P149 wd:Q12502 ;
+              wdt:P186 wd:Q375253 ;
+              wdt:P856 <https://www.visitrimini.com/en/> ;
+              wdt:P1684 "SENATUS POPVLVSQVE ROMANUS IMPERATORI CAESARI DIVI IVLIO FILIO AVGVSTO IMPERATORI SEPTEM CONSOLI SEPTEM DESIGNATO OCTAVOM VIA FLAMINIA ET RELIQVEIS CELEBERRIMEIS ITALIAE VIEIS ET AVCTORITATE EIVS MVNITEIS"@la .
+}
+<strong>WHERE</strong> {
+  BIND(wd:Q1072853 AS ?archOfAugustusRimini)
+  BIND(wd:Q1405 AS ?augustus) # Augustus
+  BIND(wd:Q12502 AS ?romanArchitecture) # Roman architecture
+  BIND(wd:Q375253 AS ?istrianStone) # Istrian stone
+}
+	</code></pre>
     <br>
-    <p>Description</p>
+	<p>
+		<a href="https://query.wikidata.org/embed.html#PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0APREFIX%20wdt%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fdirect%2F%3E%0APREFIX%20xsd%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0A%0ACONSTRUCT%20%7B%0A%20%20wd%3AQ1072853%20wdt%3AP571%20%220027-01-01T00%3A00%3A00Z%22%5E%5Exsd%3AdateTime%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP138%20wd%3AQ1405%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP149%20wd%3AQ12502%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP186%20wd%3AQ375253%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP856%20%3Chttps%3A%2F%2Fwww.visitrimini.com%2Fen%2F%3E%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP1684%20%22SENATUS%20POPVLVSQVE%20ROMANUS%20IMPERATORI%20CAESARI%20DIVI%20IVLIO%20FILIO%20AVGVSTO%20IMPERATORI%20SEPTEM%20CONSOLI%20SEPTEM%20DESIGNATO%20OCTAVOM%20VIA%20FLAMINIA%20ET%20RELIQVEIS%20CELEBERRIMEIS%20ITALIAE%20VIEIS%20ET%20AVCTORITATE%20EIVS%20MVNITEIS%22%40la%20.%0A%7D%0AWHERE%20%7B%0A%20%20BIND%28wd%3AQ1072853%20AS%20%3FarchOfAugustusRimini%29%0A%20%20BIND%28wd%3AQ1405%20AS%20%3Faugustus%29%20%23%20Augustus%0A%20%20BIND%28wd%3AQ12502%20AS%20%3FromanArchitecture%29%20%23%20Roman%20architecture%0A%20%20BIND%28wd%3AQ375253%20AS%20%3FistrianStone%29%20%23%20Istrian%20stone%0A%7D" 
+		target="_blank" rel="noopener noreferrer" class="no-underline-link">
+		🔗 Let's see the results
+		</a>
+	<p>
+	Here the problems are the same, the objects are not correct, even if in the comments it identified the Istrian stone, roman architecture etc... in the results the were changed!
+	Therefore, I need to modify the query to generate meaningful triples.
+	</p>
+    <h2>Correct CONSTRUCT query and triples &#9989</h2>
     <br>
+    <p>I need to modify manually the <strong class="highlighted-strong">CONSTRUCT</strong> query in order to have correct triples as a result:
     <br>
+	<pre class="code-frame" style="max-width: 1000px;"><code>
+PREFIX wd: &lt;http://www.wikidata.org/entity/&gt;
+PREFIX wdt: &lt;http://www.wikidata.org/prop/direct/&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+<strong>CONSTRUCT </strong> {
+?monument wdt:P571 ?inaugurationdate .             # Inauguration date of the Arch of Augustus
+?monument wdt:P138 ?eponym .                       # Dedicated to Augustus
+?monument wdt:P149 ?architecturalstyle .           # Architectural style: the Roman classical architectural style  
+?monument wdt:P186 ?material.                      # Material: Istrian stone
+?monument wdt:P856 ?site1 .                        # Website 1
+?monument wdt:P856 ?site2 .                        # Website 2
+?monument wdt:P1684 ?inscription .                 # Inscription
+}
+<strong>WHERE</strong> {
+BIND(wd:Q1072853 AS ?monument)                                      					      # ?monument is the Arch of Augustus
+BIND("-0026-01-01T00:00:00Z"^^xsd:dateTime AS ?inaugurationdate)    					      # ?inaugurationdate is 27 BC
+BIND(wd:Q1405 AS ?eponym)                                                                                     # ?eponym is Augustus
+BIND(wd:Q223750 AS ?architecturalstyle)	                                                                      # ?architecturalstyle is the Roman classical architectural style 
+BIND(wd:Q1401767 AS ?material)                                                                                # ?material is the Istrian stone
+BIND(<https://www.comune.rimini.it/vivere-il-comune/luoghi/area-archeologica/arco-daugusto> AS ?site1)        										      #?site1 is the website 1 
+BIND(<https://riminiturismo.it/cosa-vedere/arte-e-cultura/archi-porte-mura-portici/arco-daugusto> AS ?site2)  											      #?site2 is the website 2
+BIND("SENATVS POPVLVS COS SEPT DESIGNAT OCTAVOM CELEBERRIMEIS ITALIAE VIEIS CONSILIO" AS ?inscription)        # the string is the inscription      
+}
+	</code></pre>
     <br>
-    <h2>Query construct Arco d'Augusto di chat GPT</h2>
-    <br>
-    <p>Description</p>
-    <br>
-    <br>
-    <br>
-    <h2>Query construct Arco d'Augusto giusta</h2>
-    <br>
-    <p>Description</p>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+	<p>
+	Here are the final results with some well constructed triples:
+	</p>
+	<iframe style="width: 90vw; height: 55vh; border: none;" src="https://query.wikidata.org/embed.html#PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0APREFIX%20wdt%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fdirect%2F%3E%0APREFIX%20xsd%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0ACONSTRUCT%20%7B%0A%20%3Fmonument%20wdt%3AP571%20%3Finaugurationdate%20.%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20Data%20inaugurazione%20dell'Arco%20d'Augusto%0A%20%3Fmonument%20wdt%3AP138%20%3Feponym%20.%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20In%20onore%20di%20Ottaviano%20Augusto%0A%3Fmonument%20wdt%3AP149%20%3Farchitecturalstyle%20.%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20Stile%20architettonico%3A%20classico%20romano%20%0A%3Fmonument%20wdt%3AP186%20%3Fmaterial.%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20Materiale%3A%20pietra%20d'Istria%0A%3Fmonument%20wdt%3AP856%20%3Fsite1%20.%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20Sito%20web%201%0A%3Fmonument%20wdt%3AP856%20%3Fsite2%20.%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20Sito%20web%202%0A%3Fmonument%20wdt%3AP1684%20%3Finscription%20.%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20iscrizione%0A%7D%0AWHERE%20%7B%0ABIND(wd%3AQ1072853%20AS%20%3Fmonument)%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20%3Fmonument%20%C3%A8%20l'Arco%20d'Augusto%0ABIND(%22-0026-01-01T00%3A00%3A00Z%22%5E%5Exsd%3AdateTime%20AS%20%3Finaugurationdate)%20%20%20%20%23%20%3Finaugurationdate%20%C3%A8%2027%20BCE%0ABIND(wd%3AQ1405%20AS%20%3Feponym)%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20%3Feponym%20%C3%A8%20Ottaviano%20Augusto%0ABIND(wd%3AQ223750%20AS%20%3Farchitecturalstyle)%09%20%23%20%3Farchitecturalstyle%20%C3%A8%20lo%20stile%20classico%20romano%20%0ABIND(wd%3AQ1401767%20AS%20%3Fmaterial)%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20%3Fmaterial%20%C3%A8%20pietra%20d'Istria%0ABIND(%3Chttps%3A%2F%2Fwww.comune.rimini.it%2Fvivere-il-comune%2Fluoghi%2Farea-archeologica%2Farco-daugusto%3E%20AS%20%3Fsite1)%20%20%20%20%20%20%20%20%20%23%3Fsite1%20%C3%A8%20il%20sito%20web%201%20%0ABIND(%3Chttps%3A%2F%2Friminiturismo.it%2Fcosa-vedere%2Farte-e-cultura%2Farchi-porte-mura-portici%2Farco-daugusto%3E%20AS%20%3Fsite2)%20%20%20%23%3Fsite2%20%C3%A8%20il%20sito%20web%202%0ABIND(%22SENATVS%C2%B7POPVLVS%C2%B7COS%C2%B7SEPT%C2%B7DESIGNAT%C2%B7OCTAVOM%C2%B7CELEBERRIMEIS%C2%B7ITALIAE%C2%B7VIEIS%C2%B7CONSILIO%22%20AS%20%3Finscription)%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%3Finscription%20%C3%A8%20l'iscrizione%20sull'arco%0A%7D%0A" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+<br>
+<br>
+<div id="footer_wrap">
+ <footer class="inner">
+        <p style="color: white; font-size: 1.1em;">Website published with <a href="https://pages.github.com" class="no-underline-link github-pages-link-hover"" style="color: white;"> GitHub Pages</a></p>
+      </footer>
+    </div>
+	
   </main>
 
 </body>

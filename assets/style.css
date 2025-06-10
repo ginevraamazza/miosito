@@ -8,6 +8,7 @@
 body {
   font-family: Arial, sans-serif;
   padding-top: 60px; /* Spazio per il menu fisso */
+  background-color: #f5f5f5
 }
 
 /* Menu principale */
@@ -15,7 +16,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #333;
+  background-color: #6A0000;
   color: white;
   height: 60px;
   display: flex;
@@ -33,6 +34,14 @@ nav ul {
 
 nav ul li {
   position: relative;
+  font-family: "Times New Roman", Times, serif; /* Font Times New Roman */
+  color: white; /* Colore del testo bianco */
+  text-decoration: none; /* Rimuove la sottolineatura dei link */
+  padding: 1.2px 0; /* Spazio intorno al testo del link */
+  display: block; /* Rende l'intera area del link cliccabile */
+  font-size: 1.18em; /* Dimensione del testo */
+  font-weight: normal; /* Assicura che non siano in grassetto a meno che non specificato */
+  transition: color 0.3s ease, background-color 0.3s ease; /* Transizione morbida al hover */
 }
 
 nav > ul > li {
@@ -48,7 +57,7 @@ nav a {
 }
 
 nav li:hover > a {
-  background-color: #111;
+  background-color: #8B0000;
 }
 
 /* Menu a tendina */
@@ -57,7 +66,7 @@ nav ul ul {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #444;
+  background-color: #8B0000;
   padding: 0;
   min-width: 180px;
   flex-direction: column;
@@ -68,11 +77,12 @@ nav ul li:hover > ul {
 }
 
 nav ul ul li a {
-  padding: 12px 16px;
+  padding: 8px 15px; /* Padding per i link del sottomenu */
+  font-size: 0.8em;
 }
 
 nav ul ul a:hover {
-  background-color: #222;
+  background-color: #6A0000;
 }
 
 /* Contenuto principale */
@@ -81,6 +91,7 @@ main {
 }
 
 h1 {
+  font-family: "Times New Roman", Times, serif; 
   font-size: 3.5em;
   font-weight: 900;
   color: #8B0000;
@@ -89,8 +100,160 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5em;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 2.5em;
+	font-weight: 500;
+	color: #8B0000;
+	text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+	margin-left: 20px
+}
+
+h3 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2em;
   font-weight: 500;
-  color: #8B4430;
+  color: #8B0000;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  margin-left: 20px
+}
+
+h4 {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 1.5em; 
+  font-weight: 500;
+  color: #5C4033; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-left: 20px;
+  margin-left: 80px;
+}
+
+pre code {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    border-radius: 10px;
+    padding: 1em;
+    display: block;
+}
+
+.my-custom-paragraph {
+	font-family: 'Playfair Display', serif;
+	color: #333333;
+	background-color: #e0f0ff;
+	padding: 15px;
+	border-radius: 10px;
+	width: fit-content;
+	margin: 20px auto;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+	}
+		
+p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1em; /* Dimensione del testo leggermente aumentata per una migliore leggibilità */
+  line-height: 1.6; /* Interlinea: 1.6 volte la dimensione del font. Ottima per la leggibilità. */
+  color: #333; /* Colore del testo grigio scuro per un buon contrasto senza essere troppo duro */
+  margin-bottom: 1em; /* Spazio sotto ogni paragrafo per separarli */
+  text-align: justify; /* Allinea il testo su entrambi i lati per un aspetto più pulito */
+  max-width: 750px; /* Limita la larghezza dei paragrafi per evitare righe troppo lunghe e difficili da leggere */
+  margin-left: auto; /* Centra il paragrafo se ha un max-width */
+  margin-right: auto; /* Centra il paragrafo se ha un max-width */
+}
+
+/* Un piccolo extra: stile per il primo rigo del paragrafo se vuoi un effetto tipo "capoverso" */
+p:first-of-type {
+  text-indent: 0; /* Rimuove l'indentazione dal primo paragrafo se non la vuoi */
+}
+
+/* Stile per un paragrafo all'interno di un contenitore specifico, se necessario */
+.content-section p {
+  /* Puoi specificare stili leggermente diversi qui se i paragrafi sono in sezioni diverse */
+  padding: 0 15px; /* Aggiunge un po' di spazio ai lati, utile su schermi piccoli */
+}
+
+.centered-image-with-border {
+  display: block; /* Essenziale per poter usare i margini automatici */
+  margin-left: auto; /* Centra l'immagine orizzontalmente */
+  margin-right: auto; /* Centra l'immagine orizzontalmente */
+  width: 400px; /* Imposta una larghezza per l'immagine */
+  height: auto; /* Mantieni le proporzioni dell'immagine */
+  border: 5px solid #8B4513; /* Cornice: 5px di spessore, solida, color marrone terra */
+  padding: 5px; /* Spazio tra l'immagine e la cornice */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Un'ombra leggera per farla risaltare */
+  border-radius: 5px; /* Angoli leggermente arrotondati per un tocco di morbidezza */
+}
+
+.no-underline-link {
+  text-decoration: none; /* Rimuove la sottolineatura */
+  color: #8B0000; /* Imposta il colore del testo */
+}
+
+/* Se vuoi un effetto quando il mouse passa sopra (hover) */
+.no-underline-link:hover {
+  color: #0056b3; /* Un blu più scuro quando il mouse è sopra */
+  text-decoration: underline; /* Potresti anche decidere di rimettere la sottolineatura solo al hover */
+}
+
+.github-pages-link-hover:hover {
+  color: #87cefa !important; /* Blu chiaro (SkyBlue). !important per garantire che sovrascriva stili inline */
+  text-decoration: underline; /* Opzionale: riaggiungi sottolineatura all'hover */
+}
+
+.section-divider {
+  border: none; /* Rimuove il bordo predefinito del browser */
+  border-top: 2px solid #ccc; /* Crea un bordo superiore come una riga */
+  color: #ccc; 
+  background-color: #ccc; /* Colore di sfondo che diventa la riga visibile */
+  height: 2px; /* Altezza della riga */
+  margin: 40px auto; /* Spazio sopra e sotto la riga, e la centra */
+  width: 60%; /* Larghezza della riga (puoi usare px, %, o rem) */
+  opacity: 0.7; /* Rende la riga leggermente trasparente per un effetto più morbido */
+}
+
+.code-frame { /* rettangolo per mettere le queries */
+  background-color: #FFFFFF; /* Sfondo leggermente grigio chiaro per distinguere il blocco */
+  border: 1px solid #ddd; /* Bordo sottile e grigio chiaro */
+  border-radius: 5px; /* Angoli leggermente arrotondati */
+  padding: 3px; /* Spazio interno tra il bordo e il codice */
+  padding-left: 50px;
+  padding-right: 100px;
+  margin: 10px auto; /* Margine esterno per staccarlo dagli altri contenuti e centrarlo */
+  max-width: 800px; /* Limita la larghezza massima del blocco di codice */
+  overflow-x: auto; /* Aggiunge una barra di scorrimento orizzontale se il codice è troppo lungo */
+  font-family: Consolas, "Courier New", Courier, monospace; /* Un font monospaziato per il codice */
+  font-size: 0.95em; /* Dimensione del font leggermente più piccola per il codice */
+  line-height: 1.4; /* Interlinea per il codice */
+  color: #333; /* Colore del testo per il codice */
+}
+
+/* Stile specifico per il tag <code> all'interno della cornice (opzionale, ma buona pratica) */
+.code-frame code {
+  display: block; /* Assicura che il codice sia un blocco e rispetti il padding */
+  white-space: pre; /* Mantiene gli spazi bianchi e gli a capo come nel sorgente */
+  /* white-space: pre-wrap; */ /* Se vuoi che il codice vada a capo automaticamente se è troppo lungo */
+}
+
+/* Stile per il tag <strong> all'interno del codice, se vuoi che sia in grassetto e magari con un colore specifico */
+.code-frame code strong {
+  color: #c7254e; /* Un rosso/bordeaux per le parole chiave, se vuoi */
+  font-weight: bold;
+}
+ .highlighted-strong {
+            color: #c7254e; /* Rosso scuro */
+            font-family: Consolas, "Courier New", Courier, monospace;
+            /* Aggiungi qui altre proprietà se vuoi, es. font-size, text-shadow */
+        }
+/* Stile per il contenitore esterno del footer (sezione con sfondo esteso) */
+#footer_wrap {
+  background-color: #6A0000; /* Rosso scuro*/
+  padding: 15px 0; /* Spazio sopra e sotto il contenuto del footer */
+  text-align: center; /* Centra il testo all'interno del footer */
+}
+
+/* Stile per il contenitore interno che limita la larghezza del contenuto */
+footer.inner {
+  max-width: 960px; /* Limita la larghezza massima del contenuto del footer (adatta a schermi grandi) */
+  margin: 0 auto; /* Centra il contenitore interno all'interno di footer_wrap */
+  padding-top: 10px;    /* <<-- Aumentato il padding superiore (da 0 a 10px, o un valore leggermente più alto) */
+  padding-right: 20px;  /* Mantenuto il padding destro */
+  padding-bottom: 0px;  /* Mantenuto il padding inferiore (se c'era un valore, ora 0px per il testo in basso) */
+  text-align: left;
 }
